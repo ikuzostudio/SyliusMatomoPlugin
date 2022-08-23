@@ -1,0 +1,7 @@
+ikuzo_matomo:
+  form:
+    title: Matomo - Configuration
+    active: Actif
+    url: URL Matomo
+    website_id: ID de site internet
+    token: Token API

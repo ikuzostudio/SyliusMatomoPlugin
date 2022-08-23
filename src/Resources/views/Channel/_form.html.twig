@@ -1,0 +1,24 @@
+<div class="ui hidden divider"></div>
+
+<h4 class="ui top attached large header">{{ 'ikuzo_matomo.form.title'|trans }}</h4>
+<div class="ui attached segment">
+    {{ form_errors(form) }}
+
+    <div class="fields">
+        <div class="field">
+            {{ form_row(form.matomoActive) }}
+        </div>
+    </div>
+    
+    <div class="three fields">
+        <div class="field">
+            {{ form_row(form.matomoUrl) }}
+        </div>
+        <div class="field">
+            {{ form_row(form.matomoWebsiteId) }}
+        </div>
+        <div class="field">
+            {{ form_row(form.matomoToken) }}
+        </div>
+    </div>
+</div>

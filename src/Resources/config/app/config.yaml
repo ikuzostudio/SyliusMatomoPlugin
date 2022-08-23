@@ -1,0 +1,12 @@
+sylius_ui:
+  events:
+    sylius.admin.channel.form.second_column_content:
+      blocks:
+        matomo:
+          template: '@IkuzoSyliusMatomoPlugin/Channel/_form.html.twig'
+          priority: 5
+    sylius.shop.layout.javascripts:
+      blocks:
+        matomo:
+          template: '@IkuzoSyliusMatomoPlugin/Shop/_tracking_code.html.twig'
+          priority: 5

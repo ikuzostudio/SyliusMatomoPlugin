@@ -1,0 +1,20 @@
+services:
+    ikuzo_sylius_matomo.form.extension.channel:
+        class: Ikuzo\SyliusMatomoPlugin\Form\Extension\ChannelTypeExtension
+        tags: ['form.type_extension']
+
+    ikuzo_sylius_matomo.services.matomo_api:
+        class: Ikuzo\SyliusMatomoPlugin\Services\MatomoApiService
+        arguments:
+            - '@sylius.context.channel'
+
+    ikuzo_sylius_matomo.event_listener.cart:
+        class: Ikuzo\SyliusMatomoPlugin\EventListener\CartSubscriber
+        arguments:
+            - '@event_dispatcher'
+            - '@sylius.product_variant_resolver.default'
+            - '@ikuzo_sylius_matomo.services.matomo_api'
+            - '@sylius.context.cart'
+            - '@sylius.repository.order'
+        tags: ['kernel.event_subscriber']
+    
